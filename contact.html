@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nguyễn Minh Kha - Liên hệ</title>
+    <meta
+      name="description"
+      content="porfolio cá nhân của Nguyễn Minh Kha, sinh viên
+    KTPM tại DH Gia Dinh.
+    "
+    />
   </head>
   <body>
     <header>
@@ -18,16 +24,100 @@
     </header>
     <main>
       <section>
-        <h2>Liên hệ</h2>
-        <p>
-          Nếu bạn muốn liên hệ với tôi, vui lòng gửi email đến địa chỉ:
-          <a href="mailto:minhkha@gmail.com">minhkha@gmail.com</a>
-        </p>
-      </section>
-      <section>
-        <h2>Thông tin liên hệ</h2>
-        <p>Số điện thoại: 0123456789</p>
-        <p>Địa chỉ: 123 Đường ABC, TP HCM</p>
+        <h2>liên hệ với tôi</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            <label for="fullname">Họ và tên:</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Nhập đẩy đủ họ và tên"
+              minlength="2"
+              required
+            />
+            <label for="date">Ngày tháng năm sinh</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              placeholder="xxxx/yy/zz"
+              required
+            />
+
+            <label for="email">nhập email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Nhập email vd: 123k@gmail.com"
+              required
+            />
+
+            <label for="phone">nhập số điện thoại</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="09xx xxx xxx"
+              pattern="[0-9]{10,11}"
+              title="Nhập 10 - 11 số"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Nội dung liên hệ</legend>
+            <label for="subject"> chủ đề </label>
+            <select name="subject" id="subject">
+              <option value="support">hỗ trợ</option>
+              <option value="learn">học tập</option>
+              <option value="other">khác</option>
+            </select>
+            <label>Ưu tiên liên hệ</label>
+            <fieldset>
+              <legend>Kênh liên hệ</legend>
+              <input
+                type="radio"
+                id="via-email"
+                name="contact-via"
+                value="email"
+                checked
+              />
+              <label for="via-email">Email</label>
+              <input
+                type="radio"
+                id="via-zalo"
+                name="contact-via"
+                value="zalo"
+                checked
+              />
+              <label for="via-zalo">liên hệ zalo</label>
+            </fieldset>
+            <label for="message">Tin nhắn</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              minlength="10"
+              required
+            ></textarea>
+            <label>
+              <input type="checkbox" name="agree" required />
+              đồng ý với <a href="#">điều khoản sử dụng</a>
+            </label>
+          </fieldset>
+          <label for="school">Choose your school from the list:</label>
+          <input list="school" name="school" id="school" />
+          <datalist id="school">
+            <option value="giadinh">trường đại học gia định</option>
+            <option value="mo">trường đại học mở</option>
+            <option value="vanlang">trường đại văn lang</option>
+            <option value="vanhien">trường đại học văn hiến</option>
+          </datalist>
+
+          <button type="submit">gửi tin nhắn</button>
+          <button type="reset">xóa và nhập lại</button>
+        </form>
       </section>
     </main>
 
